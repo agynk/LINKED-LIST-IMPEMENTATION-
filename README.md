@@ -1,86 +1,84 @@
-#include <stdio.h> 
-#include <stdlib.h>
+LINKED-LIST-IMPEMENTATIO
 
-// Define node structure
-struct Node {
-    int data;
-    struct Node* next;
-};
+*COMPANY* :CODTECH IT SOLUTIONS
 
-// Function to insert a new node at the end
-void insert(struct Node** head_ref, int new_data) {
-    struct Node* new_node = (struct Node*)malloc(sizeof(struct Node));
-    struct Node* last = *head_ref;
+*NAME* :ANKITA KUMARI
 
-    new_node->data = new_data;
-    new_node->next = NULL;
+*INTERN ID* :CT04DN1540
 
-    // If the linked list is empty
-    if (*head_ref == NULL) {
-        *head_ref = new_node;
-        return;
-    }
+*DOMAIN* :C LANGUAGE
 
-    // Traverse to the end and insert
-    while (last->next != NULL) {
-        last = last->next;
-    }
+*DURATION* :4 WEEKS
 
-    last->next = new_node;
-}
+*MENTOR* :NEELA SANTOSH
 
-// Function to delete a node by value
-void deleteNode(struct Node** head_ref, int key) {
-    struct Node *temp = *head_ref, *prev = NULL;
+##DESCRIPTION ABOUT LINKEDLIST IMPLEMENTAION :
 
-    // If head node itself holds the key
-    if (temp != NULL && temp->data == key) {
-        *head_ref = temp->next;
-        free(temp);
-        return;
-    }
+Singly Linked List Implementation – A 500-Word Description
+A Linked List is a linear data structure used to store a collection of elements, called nodes, in a sequence. Each node contains two components: the data and a pointer (or reference) to the next node in the list. Among different types of linked lists, the singly linked list is the most basic and commonly used.
 
-    // Search for the key
-    while (temp != NULL && temp->data != key) {
-        prev = temp;
-        temp = temp->next;
-    }
+In a singly linked list, every node points only to its immediate successor, creating a one-way chain. Unlike arrays, linked lists do not use contiguous memory blocks, allowing dynamic memory allocation. This makes them efficient in scenarios where the size of the data is unknown or changes frequently.
 
-    // If key was not found
-    if (temp == NULL) {
-        printf("Element %d not found.\n", key);
-        return;
-    }
+Components of a Singly Linked List
+Node: The fundamental unit of a linked list. A node typically includes:
 
-    // Unlink the node
-    prev->next = temp->next;
-    free(temp);
-}
+data: The value or information it holds.
 
-// Function to traverse and print the list
-void traverse(struct Node* node) {
-    while (node != NULL) {
-        printf("%d -> ", node->data);
-        node = node->next;
-    }
-    printf("NULL\n");
-}
+next: A reference or pointer to the next node in the list.
 
-// Main function
-int main() {
-    struct Node* head = NULL;
+Head: The first node of the linked list. It acts as the entry point and is used to traverse the entire list.
 
-    insert(&head, 10);
-    insert(&head, 20);
-    insert(&head, 30);
-    printf("Linked list: ");
-    traverse(head);
+Tail (Optional in Implementation): While not always explicitly maintained, it refers to the last node in the list, whose next pointer is null (or None in Python).
 
-    deleteNode(&head, 20);
-    printf("After deletion: ");
-    traverse(head);
+Basic Operations
+Insertion:
 
-    deleteNode(&head, 40); // Try to delete non-existing element
+At the Beginning: Create a new node and set its next pointer to the current head. Then update the head to this new node.
 
-    return 0;
-}
+At the End: Traverse the list until the last node is reached. Set its next to the new node.
+
+At a Specific Position: Traverse to the required position and adjust pointers accordingly.
+
+Deletion:
+
+From the Beginning: Update the head to point to the second node.
+
+From the End: Traverse to the second-last node and set its next to null.
+
+From a Specific Position: Locate the previous node of the one to be deleted and adjust the next pointer.
+
+Traversal: Start from the head and visit each node by following the next pointer until reaching a null reference.
+
+Search: Traverse the list comparing each node’s data with the target value.
+
+Advantages of Linked Lists
+Dynamic Size: Unlike arrays, linked lists can grow or shrink in size dynamically during runtime.
+
+Efficient Insertions/Deletions: Adding or removing elements does not require shifting other elements, which makes it more efficient than arrays in some cases.
+
+Disadvantages
+Memory Usage: Each node requires additional memory for storing the pointer.
+
+Sequential Access: Unlike arrays, random access is not possible; to access an element, one must traverse from the head.
+
+Slower Access Time: Due to lack of indexing, accessing elements is generally slower.
+
+Applications
+Linked lists are commonly used in scenarios such as:
+
+Implementing stacks and queues
+
+Dynamic memory allocation
+
+Maintaining directories or playlists
+
+Representing polynomial equations or large numbers
+
+Conclusion
+A singly linked list is a foundational data structure that offers flexibility in memory management and efficient insertions/deletions. Its simple yet powerful structure makes it a fundamental topic in computer science and an essential concept for programmers to understand. Despite some limitations like slower access time, its advantages make it suitable for various dynamic data storage needs.
+
+
+
+
+No file chosenNo file chosen
+ChatGPT can make mistakes. Check important info. See Cookie Preferences.
