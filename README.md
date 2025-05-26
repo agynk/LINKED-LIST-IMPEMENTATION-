@@ -77,8 +77,7 @@ Representing polynomial equations or large numbers
 Conclusion
 A singly linked list is a foundational data structure that offers flexibility in memory management and efficient insertions/deletions. Its simple yet powerful structure makes it a fundamental topic in computer science and an essential concept for programmers to understand. Despite some limitations like slower access time, its advantages make it suitable for various dynamic data storage needs.
 
+#3OUTPUT 
+![Image](https://github.com/user-attachments/assets/33dfdf0e-c6ae-4ff5-bb44-f836e34c3b6b)
 
 
-
-No file chosenNo file chosen
-ChatGPT can make mistakes. Check important info. See Cookie Preferences.
