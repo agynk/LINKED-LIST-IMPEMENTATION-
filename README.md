@@ -1,4 +1,3 @@
-# LINKED-LIST-IMPEMENTATION-
 #include <stdio.h>
 #include <stdlib.h>
 
